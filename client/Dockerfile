@@ -1,4 +1,4 @@
-FROM node:16-alpine as builder
+FROM node:12-alpine as builder
 
 RUN mkdir -p /app
 
@@ -20,8 +20,8 @@ FROM nginx:1.17.1-alpine
 EXPOSE 3000
 COPY --from=builder /app/build /usr/share/nginx/html
 COPY ./nginx/default.conf /etc/nginx/conf.d/default.conf
-RUN pwd
-RUN ls
+# RUN pwd
+# RUN ls
 # new
 # COPY nginx/nginx.conf /etc/nginx/conf.d/default.conf
 # CMD ["nginx", "-g", "daemon off;"]
