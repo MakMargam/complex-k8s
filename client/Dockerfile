@@ -18,6 +18,7 @@ RUN npm build --prod
 FROM nginx:1.17.1-alpine
 EXPOSE 3000
 COPY ./nginx/default.conf /etc/nginx/conf.d/default.conf
+RUN ls
 COPY --from=build /app/build /usr/share/nginx/html
 # new
 # COPY nginx/nginx.conf /etc/nginx/conf.d/default.conf
