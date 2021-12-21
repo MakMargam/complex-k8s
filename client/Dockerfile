@@ -8,7 +8,7 @@ RUN ls
 COPY . .
 
 
-RUN npm build --prod
+RUN npm run build --prod
 
 
 # CMD [ "npm", "start","--host", "0.0.0.0", "--port", "3000" ]  
