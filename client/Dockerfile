@@ -3,13 +3,13 @@ FROM node:16-alpine as builder
 RUN mkdir -p /app
 
 WORKDIR /app
-COPY ./package.json .
+COPY package.json .
 RUN npm install
 RUN ls
 COPY . .
 
 
-RUN npm build --prod
+RUN npm run build --prod
 
 
 # CMD [ "npm", "start","--host", "0.0.0.0", "--port", "3000" ]  
