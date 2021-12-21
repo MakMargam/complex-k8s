@@ -3,12 +3,13 @@ FROM node:12-alpine as build
 RUN mkdir -p /app
 
 WORKDIR /app
+COPY ./package.json .
 RUN npm install
 RUN ls
 COPY . .
 
 
-RUN npm run build --prod
+RUN npm build --prod
 
 
 # CMD [ "npm", "start","--host", "0.0.0.0", "--port", "3000" ]  
