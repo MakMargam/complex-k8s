@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: server
-          image: mak2497/complex-server
+          image: mak2497/complex-server:latest
           ports:
             - containerPort: 5000
           env:
