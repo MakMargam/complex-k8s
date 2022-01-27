@@ -19,7 +19,7 @@ function App() {
           >
             Learn React using Fib Calculator App 
           </a>
-          <Link to="/">Alpha Home</Link>
+          <Link to="/">Beta Home</Link>
           <Link to="/otherpage">Other Page</Link>
         </header>
         <div>
